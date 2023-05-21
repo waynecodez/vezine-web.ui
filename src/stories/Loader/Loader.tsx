@@ -1,0 +1,84 @@
+import './loader.css';
+
+interface LoaderProps {
+	/**
+	 * How large should the loader be?
+	 */
+	type?: 'pill' | 'spinner';
+	/**
+	 * What color do you want the loader to be?
+	 * Note: Does not apply to the pill loader
+	 */
+	color?: string;
+	/**
+	 * What size do you want the loader to be?
+	 * Note: Does not apply to the pill loader
+	 */
+	size?: 'sm' | 'md' | 'lg';
+}
+
+export const Loader = ({ type = 'pill', color = 'red-400', size = 'sm' }: LoaderProps) => {
+	const Pill = () => (
+		<div
+			style={{
+				position: 'absolute',
+				top: '50%',
+				left: '50%',
+				transform: 'translate(-50%,-50%)'
+			}}
+			data-testid='loading-pill'>
+			<div className='opacity-60 bg-white flex space-x-2 pt-3 pb-2 px-2 rounded-full justify-center items-center'>
+				<div className='bg-blue-500 p-2  w-4 h-4 rounded-full animate-bounce blue-circle'></div>
+				<div className='bg-green-400 p-2 w-4 h-4 rounded-full animate-bounce green-circle'></div>
+				<div className='bg-red-600 p-2  w-4 h-4 rounded-full animate-bounce red-circle'></div>
+			</div>
+		</div>
+	);
+
+	const Spinner = () => {
+		const getSpinnerSize = () => {
+			switch (size) {
+				case 'sm':
+					return 'w-5 h-5';
+				case 'md':
+					return 'w-10 h-10';
+				case 'lg':
+					return 'w-14 h-14';
+				default:
+					return 0;
+			}
+		};
+
+		const getSpinnerColor = () => {
+			return `border-${color}`;
+		};
+
+		return (
+			<div className='flex items-center justify-center'>
+				<div
+					className={`
+						${getSpinnerSize()}
+						${getSpinnerSize()}
+						${getSpinnerColor()}
+						border-b-2
+						rounded-full
+						animate-spin mr-3
+					`}
+				/>
+			</div>
+		);
+	};
+
+	const Content = () => {
+		switch (type) {
+			case 'pill':
+				return <Pill />;
+			case 'spinner':
+				return <Spinner />;
+			default:
+				return null;
+		}
+	};
+
+	return <Content />;
+};
