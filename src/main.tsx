@@ -1,5 +1,5 @@
 /**
- * Primary UI component for user interaction
+ * Exposed components
  */
 export * from './stories/Button';
 export * from './stories/Loader';

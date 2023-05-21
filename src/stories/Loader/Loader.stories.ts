@@ -21,7 +21,7 @@ export const Pill: Story = {
 export const Spinner: Story = {
 	args: {
 		type: 'spinner',
-		color: 'red-500',
+		color: 'border-amber-600',
 		size: 'lg'
 	}
 };

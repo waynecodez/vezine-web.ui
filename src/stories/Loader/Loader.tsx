@@ -15,9 +15,13 @@ interface LoaderProps {
 	 * Note: Does not apply to the pill loader
 	 */
 	size?: 'sm' | 'md' | 'lg';
+	/**
+	 *
+	 */
+	onClick?: () => void;
 }
 
-export const Loader = ({ type = 'pill', color = 'red-400', size = 'sm' }: LoaderProps) => {
+export const Loader = ({ type = 'pill', color, size = 'sm', onClick }: LoaderProps) => {
 	const Pill = () => (
 		<div
 			style={{
@@ -36,34 +40,24 @@ export const Loader = ({ type = 'pill', color = 'red-400', size = 'sm' }: Loader
 	);
 
 	const Spinner = () => {
-		const getSpinnerSize = () => {
+		const getSpinnerSize = (): string => {
 			switch (size) {
 				case 'sm':
-					return 'w-5 h-5';
+					return 'w-4 h-4';
 				case 'md':
 					return 'w-10 h-10';
 				case 'lg':
 					return 'w-14 h-14';
 				default:
-					return 0;
+					return '';
 			}
-		};
-
-		const getSpinnerColor = () => {
-			return `border-${color}`;
 		};
 
 		return (
 			<div className='flex items-center justify-center'>
 				<div
-					className={`
-						${getSpinnerSize()}
-						${getSpinnerSize()}
-						${getSpinnerColor()}
-						border-b-2
-						rounded-full
-						animate-spin mr-3
-					`}
+					className={`${color} ${getSpinnerSize()} border-b-2 rounded-full animate-spin mr-3`}
+					onClick={onClick}
 				/>
 			</div>
 		);

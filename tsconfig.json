@@ -9,6 +9,7 @@
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
+    "esModuleInterop": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
@@ -19,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [ "src", ".storybook/stories", "src/stories", "./package.json", "./tsconfig.node.json" ],
+  "include": [ "src", ".storybook/stories", "src/stories", "package.json", "tsconfig.node.json" ],
   "references": [ { "path": "./tsconfig.node.json" } ]
 }
