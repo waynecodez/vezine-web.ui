@@ -5,7 +5,11 @@ import { Loader } from './Loader';
 const meta = {
 	title: 'UI/Loader',
 	component: Loader,
-	tags: ['autodocs']
+	tags: ['autodocs'],
+	argTypes: {
+		size: { select: 'radio', options: ['sm', 'md', 'lg'] },
+		color: { control: { type: 'select' }, options: ['brand', 'accent', 'white', 'black'] }
+	}
 } satisfies Meta<typeof Loader>;
 
 export default meta;
@@ -19,9 +23,12 @@ export const Pill: Story = {
 };
 
 export const Spinner: Story = {
+	render: ({ ...args }) => {
+		return <Loader {...args} />;
+	},
 	args: {
 		type: 'spinner',
-		color: 'border-amber-600',
+		color: 'white',
 		size: 'lg'
 	}
 };

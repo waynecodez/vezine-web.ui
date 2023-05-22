@@ -1,4 +1,5 @@
 import './loader.css';
+import cn from 'classnames';
 
 interface LoaderProps {
 	/**
@@ -21,7 +22,7 @@ interface LoaderProps {
 	onClick?: () => void;
 }
 
-export const Loader = ({ type = 'pill', color, size = 'sm', onClick }: LoaderProps) => {
+export const Loader = ({ type = 'pill', color = 'white', size = 'sm', onClick }: LoaderProps) => {
 	const Pill = () => (
 		<div
 			style={{
@@ -52,11 +53,25 @@ export const Loader = ({ type = 'pill', color, size = 'sm', onClick }: LoaderPro
 					return '';
 			}
 		};
+		const getSpinnerColor = (): string => {
+			switch (color) {
+				case 'brand':
+					return 'border-indigo-500';
+				case 'accent':
+					return 'border-yellow-500';
+				case 'white':
+					return 'border-white-500 dark:border-red-500';
+				case 'black':
+					return 'border-black';
+				default:
+					return 'dark:border-white-500 border-red-500';
+			}
+		};
 
 		return (
 			<div className='flex items-center justify-center'>
 				<div
-					className={`${color} ${getSpinnerSize()} border-b-2 rounded-full animate-spin mr-3`}
+					className={`${getSpinnerSize()} ${getSpinnerColor()} border-b-2 rounded-full animate-spin mr-3 `}
 					onClick={onClick}
 				/>
 			</div>

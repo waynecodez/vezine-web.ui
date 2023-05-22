@@ -34,7 +34,7 @@ const buttonProps = variantProps({
 	variants: {
 		color: {
 			brand: 'bg-indigo-500 disabled:bg-indigo-400',
-			accent: 'bg-orange-500 disabled:bg-orange-300'
+			accent: 'bg-amber-500 disabled:bg-orange-300'
 		},
 		size: {
 			xs: 'px-3 py-1 text-xs',
