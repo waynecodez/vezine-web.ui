@@ -7,7 +7,8 @@ import { peerDependencies } from './package.json';
 export default defineConfig({
 	server: {
 		hmr: true,
-		port: 3000
+		port: 3000,
+		open: true
 	},
 	plugins: [react()],
 	build: {
