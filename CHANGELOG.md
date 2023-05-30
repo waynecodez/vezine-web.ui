@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/@waynecodez/rtc-stream/compare/v0.0.5...v0.0.6) (2023-05-30)
+
+
+### Bug Fixes
+
+* version bump bug ([bd14f93](https://github.com/@waynecodez/rtc-stream/commitsbd14f932f89ebb97e809b46e53b90615013561a3))
+
 ### [0.0.5](https://github.com/@waynecodez/rtc-stream/compare/v0.0.4...v0.0.5) (2023-05-30)
 
 
