@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/@waynecodez/rtc-stream/compare/v0.0.6...v0.0.7) (2023-05-30)
+
+
+### Features
+
+* adds open flag to open browser on dev launch ([19957e2](https://github.com/@waynecodez/rtc-stream/commits19957e20f8cf05d62d0a76265da232194db45ab6))
+* upgrades storybook ([fc4be73](https://github.com/@waynecodez/rtc-stream/commitsfc4be734f0fecd6f0ff618d869f71610fb3fa092))
+
 ### [0.0.6](https://github.com/@waynecodez/rtc-stream/compare/v0.0.5...v0.0.6) (2023-05-30)
 
 
