@@ -20,6 +20,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [ "src", ".storybook/stories", "src/stories", "package.json", "tsconfig.node.json" ],
   "references": [ { "path": "./tsconfig.node.json" } ]
 }

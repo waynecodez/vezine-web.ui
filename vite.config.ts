@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
-import { peerDependencies, dependencies } from './package.json';
+import { peerDependencies } from './package.json';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,9 +14,9 @@ export default defineConfig({
 			// for UMD name: 'GlobalName'
 		},
 		rollupOptions: {
-			external: [...Object.keys(peerDependencies), ...Object.keys(dependencies)]
+			external: [...Object.keys(peerDependencies)]
 		},
 		target: 'esnext',
 		sourcemap: true
-	},
+	}
 });
