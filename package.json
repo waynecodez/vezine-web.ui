@@ -13,7 +13,7 @@
 		"build:storybook": "storybook build",
 		"build:watch": "nodemon --exec \"vite build\" -e .tsx",
 		"release": "standard-version",
-		"publish": "git push --follow-tags origin main && npm publish"
+		"release:publish": "git push --follow-tags origin main && npm publish"
 	},
 	"dependencies": {},
 	"devDependencies": {
