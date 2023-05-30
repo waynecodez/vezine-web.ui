@@ -5,6 +5,10 @@ import { peerDependencies } from './package.json';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+	server: {
+		hmr: true,
+		port: 3000
+	},
 	plugins: [react()],
 	build: {
 		lib: {
