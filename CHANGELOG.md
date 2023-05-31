@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/@waynecodez/rtc-stream/compare/v0.0.7...v0.0.8) (2023-05-31)
+
+
+### Features
+
+* downgrade to react17 ([5487043](https://github.com/@waynecodez/rtc-stream/commits54870434c34a487422cbee3f951ac9e08ac63ceb))
+
 ### [0.0.7](https://github.com/@waynecodez/rtc-stream/compare/v0.0.6...v0.0.7) (2023-05-30)
 
 
